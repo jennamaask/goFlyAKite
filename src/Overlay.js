@@ -9,7 +9,7 @@ class Overlay extends Component{
     constructor() {
         super();
         this.state = {
-            locationsAndFun: [],
+            info: [],
         }
     }
 
@@ -21,14 +21,16 @@ class Overlay extends Component{
             for (let entry in submissions){
                 let tempObject = {
                     location:"",
-                    fun:""
+                    fun:"",
+                    date:""
                 }
                 tempObject.location = submissions[entry].location
                 tempObject.fun = submissions[entry].fun
+                tempObject.date = submissions[entry].date
                 tempArray.push(tempObject);
             }
             this.setState({
-                locationsAndFun: tempArray
+                info: tempArray
             })
 
         })
@@ -38,17 +40,25 @@ class Overlay extends Component{
         return(
             <div className="overlay">
                 {
-                    this.state.locationsAndFun.map((entry)=> {
-                        let entryLocation = entry.location
-                        let entryFun = entry.fun
-                        let randomRight = mapLocations[entryLocation].right[Math.floor(Math.random() * mapLocations[entryLocation].right.length)];
-                        let randomTop = mapLocations[entryLocation].top[Math.floor(Math.random() * mapLocations[entryLocation].top.length)];
-                        let circleColor = colors[entryFun]
-                        return (
-                            <div className={"circle "} style={{top:randomTop, right: randomRight, background: circleColor}} >
-
-                            </div>
-                        )
+                    this.state.info.map((entry)=> {
+                        let currentDate = new Date().getDate()
+                        currentDate = ('0' + currentDate).slice(-2)
+                        let month = new Date().getMonth() + 1
+                        month = ('0' + month).slice(-2)
+                        const year = new Date().getFullYear()
+                        currentDate = currentDate + '/' + month + '/' + year
+                        if (currentDate === entry.date) {
+                            let entryLocation = entry.location
+                            let entryFun = entry.fun
+                            let randomRight = mapLocations[entryLocation].right[Math.floor(Math.random() * mapLocations[entryLocation].right.length)];
+                            let randomTop = mapLocations[entryLocation].top[Math.floor(Math.random() * mapLocations[entryLocation].top.length)];
+                            let circleColor = colors[entryFun]
+                            return (
+                                <div className={"circle " + entry.location} style={{top:randomTop, right: randomRight, background: circleColor}} >
+    
+                                </div>
+                            )
+                        }
                     })
 
                 }

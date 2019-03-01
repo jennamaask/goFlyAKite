@@ -1,11 +1,11 @@
 
 const mapLocations = {
 
-    Goderich: {
+    goderich: {
         top: ["55%" , "55.5%" , "56%" ],
         right: ["51%", "51.5%", "52%"]
     },
-    Kincardine: {
+    kincardine: {
         top: ["10%", "9%", "8%"],
         right: ["90%", "92%", "94%"]
     },

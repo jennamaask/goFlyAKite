@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import firebase from "./firebase";
 import waveDescription from "./waves.js";
+import windDescription from "./wind.js";
 
 class Conditions extends Component {
     constructor(){
@@ -26,19 +27,28 @@ class Conditions extends Component {
     render(){
         return (
             <div className="conditions">
-                <h2>Current Conditions</h2>
+                <h2>Most Recent Conditions</h2>
                 {
                     this.state.submissions.map((submission) => {
-                    return (
-                        <div>
-                            <p>{submission.name}</p>
-                            <p>{submission.wind}</p>
-                            <p>{submission.waves}</p>
-                            <p>{submission.fun}</p>
-                            <p>{submission.other}</p>
-                        </div>
-
-                    )
+                        let currentDate = new Date().getDate()
+                        currentDate = ('0' + currentDate).slice(-2)
+                        let currentMonth = new Date().getMonth() + 1
+                        currentMonth = ('0' + currentMonth).slice(-2)
+                        const currentYear = new Date().getFullYear()
+                        currentDate = currentDate + '/' + currentMonth + '/' + currentYear
+                        if (currentDate === submission.date){
+                            const convertedLocation = submission.location.replace(/([A-Z])/g, " $1")
+                            let displayLocation = convertedLocation.charAt(0).toUpperCase() + convertedLocation.slice(1)
+                        return (
+                            <div>
+                                <p>{submission.name}</p>
+                                <p>{windDescription[submission.wind]}</p>
+                                <p>{waveDescription[submission.waves]}</p>
+                                <p>{displayLocation}</p>
+                                <p>{submission.other}</p>
+                            </div>
+                        )
+                    }
                 })}
             </div>
         )
