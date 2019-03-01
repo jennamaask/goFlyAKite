@@ -73,12 +73,14 @@ class Form extends Component {
                 </select>
                 <fieldset>
                     <legend>How was the wind</legend>
-                    <label htmlFor="light">Light</label>
+                    <label htmlFor="light">Great for foiling (0-13 knots)</label>
                     <input type="radio" name="wind" value="light" id="light" onChange={this.handleChange} checked={this.state.wind === "light"}/>
-                    <label htmlFor="medium">Perfect</label>
-                    <input type="radio" name="wind" value="medium" id="medium" onChange={this.handleChange} checked={this.state.wind === "medium"}/>
-                    <label htmlFor="strong">Super Windy</label>
-                    <input type="radio" name="wind" value="strong" id="strong" onChange={this.handleChange} checked={this.state.wind ==="strong"}/>
+                    <label htmlFor="mediumLight">On the lighter side (13 - 17 knots)</label>
+                    <input type="radio" name="wind" value="mediumLight" id="mediumLight" onChange={this.handleChange} checked={this.state.wind === "mediumLight"}/>
+                    <label htmlFor="mediumStrong">Solid (18 - 25 knots)</label>
+                    <input type="radio" name="wind" value="mediumStrong" id="mediumStrong" onChange={this.handleChange} checked={this.state.wind ==="mediumStrong"}/>
+                    <label htmlFor="strong">Very Strong (25+ knots)</label>
+                    <input type="radio" name="wind" value="strong" id="strong" onChange={this.handleChange} checked={this.state.wind === "strong"} />
                 </fieldset>
                 <fieldset>
                     <legend>How were the waves</legend>

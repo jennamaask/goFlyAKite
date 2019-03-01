@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import firebase from "./firebase";
+import waveDescription from "./waves.js";
 
 class Conditions extends Component {
     constructor(){
