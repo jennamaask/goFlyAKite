@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Conditions.css";
 import firebase from "./firebase";
 import waveDescription from "./waves.js";
 import windDescription from "./wind.js";
@@ -26,8 +27,17 @@ class Conditions extends Component {
     }
     render(){
         return (
-            <div className="conditions">
-                <h2>Most Recent Conditions</h2>
+            <div className="conditions" id="conditions">
+                <h2>Today's Conditions</h2>
+                <div className="headings">
+                <h3 className="displayName">Name</h3>
+                <h3 className="displayDate">Date & Time</h3>
+                <h3 className="displayLocation">Location</h3>
+                <h3 className="displayWind">Wind</h3>
+                <h3 className="displayWave">Waves</h3>
+                <h3 className="displayOther">Comments</h3>
+                <p class="empty">Looks like no one has submitted anything for today.</p>
+                </div>
                 {
                     this.state.submissions.map((submission) => {
                         let currentDate = new Date().getDate()
@@ -37,17 +47,20 @@ class Conditions extends Component {
                         const currentYear = new Date().getFullYear()
                         currentDate = currentDate + '/' + currentMonth + '/' + currentYear
                         if (currentDate === submission.date){
+                            document.getElementsByClassName(".empty")[0].style.visibility = "hidden";
                             const convertedLocation = submission.location.replace(/([A-Z])/g, " $1")
                             let displayLocation = convertedLocation.charAt(0).toUpperCase() + convertedLocation.slice(1)
                         return (
-                            <div>
-                                <p>{submission.name}</p>
-                                <p>{windDescription[submission.wind]}</p>
-                                <p>{waveDescription[submission.waves]}</p>
-                                <p>{displayLocation}</p>
-                                <p>{submission.other}</p>
+                            <div className="entry">
+                                <p className="displayName">{submission.name}</p>
+                                <p className="displayDate">{submission.date} {submission.time}</p>
+                                <p className="displayLocation">{displayLocation}</p>
+                                <p className="displayWind">{windDescription[submission.wind]}</p>
+                                <p className="displayWave">{waveDescription[submission.waves]}</p>
+                                <p className="displayOther">{submission.other}</p>
                             </div>
                         )
+                        
                     }
                 })}
             </div>

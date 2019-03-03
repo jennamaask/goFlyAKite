@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import "./setup.css";
 import './App.css';
 import Header from "./Header.js";
 import Main from "./Main.js";
 import Conditions from "./Conditions.js";
+
 
 class App extends Component {
   render() {

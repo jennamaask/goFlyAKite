@@ -1,8 +1,8 @@
 
 const waveDescription = {
-    flat: "It is flat",
+    flat: "Nice and flat",
     swell: "There was some swell",
-    bigWaves: "There are big waves!"
+    bigWaves: "There was big waves!"
 }
 
 export default waveDescription

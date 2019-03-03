@@ -1,0 +1,48 @@
+.conditions h2 {
+    text-align: center;
+    font-size: 4rem;
+}
+
+.headings {
+    display: flex;     
+}
+
+.headings h3 {
+    padding: 5px 15px;
+}
+
+.entry {
+    display: flex;
+    background: #e3e4db;
+    margin: 10px 5px;
+    border-radius: 20px;
+}
+
+.entry p {
+    color: #18232e;
+    padding: 5px 15px;
+}
+
+.displayName {
+    width: 15%;
+}
+
+.displayDate {
+    width: 20%;
+}
+
+.displayLocation {
+    width: 20%;
+}
+
+.displayWind {
+    width: 15%
+}
+
+.displayWave {
+    width: 15%
+}
+
+.displayOther {
+    width: 15%
+}

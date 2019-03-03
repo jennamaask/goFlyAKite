@@ -6,32 +6,189 @@
     left: 0;
 }
 
-.map {
-    position: relative;
-    width: 70%;
-}
-
-img {
-    width: 100%;
-    display: block;
-}
-
-
 .circle {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    /* background:rgba(255, 0, 0, .5); */
     position: absolute;  
-}
-
-.circle:before{
-    content: "Goderich";
-    display: none;
 }
 
 .circle:hover::before {
     display: block;
+}
+
+.alpena:before {
+    content: "Alpena";
+    display: none;
+}
+
+.algoma:before{
+    content:"Algoma";
+    display: none;
+}
+
+.brestBay:before {
+    content:"Brest Bay";
+    display: none;
+}
+
+.caseville:before {
+    content: "Caseville";
+    display: none;
+}
+
+.catHeadBay:before {
+    content: "Cat Head Bay";
+    display: none;
+}
+
+.cherryStreetBeach:before {
+    content: "Cherry Street Beach";
+    display: none;
+}
+
+.cleveland:before {
+    content: "Cleveland";
+    display: none;
+}
+
+.coburgBeach:before {
+    content: "Coburg Beach";
+    display: none;
+}
+
+.conneaut:before {
+    content: "Conneaut";
+    display: none;
+}
+
+.duluth:before {
+    content: "Duluth";
+    display: none;
+}
+
+.escanaba:before {
+    content: "Escanaba";
+    display: none;
+}
+
+.goderich:before {
+    content: "Goderich";
+    display: none;
+}
+
+.grandHaven:before {
+    content: "Grand Haven";
+    display: none;
+}
+
+.greatSandBay:before {
+    content: "Great Sand Bay";
+    display: none;
+}
+
+.kettlePoint:before {
+    content: "Kettle Point";
+    display: none;
+}
+
+.kincardine:before {
+    content: "Kincardine";
+    display: none;
+}
+
+.kellysIsland:before {
+    content: "Kelly's Island";
+    display: none;
+}
+
+.lakeport:before {
+    content: "Lakeport";
+    display: none;
+}
+
+.ludington:before {
+    content: "Ludington";
+    display: none;
+}
+
+.longPoint:before {
+    content: "Long Point";
+    display: none;
+}
+
+.michiganCity:before {
+    content: "Michigan City";
+    display: none;
+}
+
+.milwaukee:before {
+    content: "Milwaukee";
+    display: none;
+}
+
+.montrose:before{
+    content: "Montrose";
+    display: none;
+}
+
+.oliphant:before {
+    content: "Oliphant";
+    display: none;
+}
+
+.oshawaBeach:before {
+    content: "Oshawa Beach";
+    display: none;
+}
+
+.scarboroughBluffs:before {
+    content: "Scarborough Bluffs";
+    display: none;
+}
+
+.sheboygan:before {
+    content: "Sheboygan";
+    display: none;
+}
+
+.sherkston:before {
+    content: "Sherkston";
+    display: none;
+}
+
+.stCahterines:before {
+    content: "St Catherines";
+    display: none;
+}
+
+.stIgnace:before {
+    content: "St Ignace";
+    display: none;
+}
+.tawasPoint:before {
+    content: "Tawas Points";
+    display: none;
+}
+
+.wassagaBeach:before {
+    content: "Wassaga Beach";
+    display: none;
+}
+
+.waukegan:before {
+    content: "Waukegan";
+    display: none;
+}
+
+.whiteRock:before {
+    content: "White Rock";
+    display: none;
+}
+
+.woodbineBeach:before {
+    content: "Woodbine Beach";
+    display: none;
 }
 
 
