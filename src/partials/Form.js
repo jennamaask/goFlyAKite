@@ -94,7 +94,7 @@ class Form extends Component {
                     <option value="longPoint">Long Point</option>
                     <option value="michiganCity">Michigan City</option>
                     <option value="milwaukee">Milwaukee</option>
-                    <option value="montrose">Montrose Beach, Illinois</option>
+                    <option value="montrose">Montrose Beach</option>
                     <option value="oliphant">Oliphant</option>
                     <option value="oshawaBeach">Oshawa Beach</option>
                     <option value="scarboroughBluffs">Scarborough Bluffs</option>
@@ -119,23 +119,23 @@ class Form extends Component {
                     <input type="radio" name="wind" value="mediumStrong" id="mediumStrong" onChange={this.handleChange} checked={this.state.wind ==="mediumStrong"} required/>
                     <label htmlFor="mediumStrong">Solid (18-25 knots)</label>
                     <input type="radio" name="wind" value="strong" id="strong" onChange={this.handleChange} checked={this.state.wind === "strong"} required/>
-                    <label htmlFor="strong">Very Strong (25+ knots)</label>
+                    <label htmlFor="strong">Very strong (25+ knots)</label>
                 </fieldset>
                 <fieldset>
                     <legend>How were the waves?</legend>
                     <input type="radio" name="waves" value="flat" id="flat" onChange={this.handleChange} checked={this.state.waves === "flat"}/>
-                    <label htmlFor="flat">flat</label>
+                    <label htmlFor="flat">Nice and Flat</label>
                     <input type="radio" name="waves" value="swell" id="swell" onChange={this.handleChange} checked={this.state.waves === "swell"}/>
                     <label htmlFor="swell">Some Swell</label>
                     <input type="radio" name="waves" value="bigWaves" id="bigWaves" onChange={this.handleChange} checked={this.state.waves === "bigWaves"}/>
-                    <label htmlFor="bigWaves">Big Waves</label>
+                    <label htmlFor="bigWaves">Big Waves!</label>
                 </fieldset>
                 <fieldset>
                     <legend>How much fun did you have?</legend>
                     <input type="radio" name="fun" value="ok" id="ok" onChange={this.handleChange} checked={this.state.fun === "ok"} required/>
                     <label htmlFor="ok">It was not great</label>
                     <input type="radio" name="fun" value="medFun" id="medFun" onChange={this.handleChange} checked={this.state.fun === "medFun"} required/>
-                    <label htmlFor="medFun">So Much Fun</label>
+                    <label htmlFor="medFun">So much fun</label>
                     <input type="radio" name="fun" value="mostFun" id="mostFun" onChange={this.handleChange} checked={this.state.fun === "mostFun"} required/>
                     <label htmlFor="mostFun">Best day of my life</label>
                 </fieldset>

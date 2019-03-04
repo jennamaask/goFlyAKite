@@ -1,4 +1,4 @@
-import "../styles/header.css"
+import "../styles/Header.css"
 import React, { Component } from "react";
 import Scrollchor from 'react-scrollchor';
 

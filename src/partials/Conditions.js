@@ -29,7 +29,6 @@ class Conditions extends Component {
                     tempArray.push(conditions[entry]);
                 }
             }
-            console.log(tempArray);
             this.setState({
                 submissions: tempArray
             })
@@ -64,7 +63,8 @@ class Conditions extends Component {
                                         <p className="displayOther">{submission.other}</p>
                                     </div>
                                 )
-                        })}
+                            })
+                        }
                     </div>
                 </div>
             )
