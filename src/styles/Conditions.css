@@ -1,0 +1,120 @@
+.conditions h2 {
+    text-align: center;
+    font-size: 4rem;
+}
+
+.headings {
+    display: flex;     
+}
+
+.headings h3 {
+    padding: 5px 15px;
+}
+
+.conditions {
+    padding: 40px 0;
+}
+
+.entry {
+    display: flex;
+    background: white;
+    margin: 10px 5px;
+    border-radius: 20px;
+}
+
+.entry p {
+    color: #18232e;
+    padding: 5px 15px;
+}
+
+.displayName {
+    width: 15%;
+}
+
+.displayDate {
+    width: 20%;
+}
+
+.displayLocation {
+    width: 15%;
+}
+
+.displayWind {
+    width: 15%
+}
+
+.displayWave {
+    width: 15%
+}
+
+.displayOther {
+    width: 20%
+}
+
+.noResults {
+    background: white;
+    color: #18232e;
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+@media(max-width: 850px) {
+    .headings h3:not(:focus):not(:active) { 
+        position: absolute; 
+        width: 1px; 
+        height: 1px; 
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(00 0 0);
+        overflow: hidden;
+    }
+    .entry p:before {
+        position: absolute;
+        left: -150px;
+    }
+    .displayName:before {
+        content: "Name"
+    }
+    .displayDate:before {
+        content: "Date & Time"
+    }
+    .displayLocation:before {
+        content: "Location"
+    }
+    .displayWind:before {
+        content: "Wind"
+    }
+    .displayWave:before {
+        content: "Waves"
+    }
+    .displayOther:before {
+        content: "Commments"
+    }
+    .entry {
+        flex-wrap: wrap;
+        padding: 5px 10px 30px 200px;
+    }
+    .entry p {
+        width: 100%;
+        position: relative;
+    }
+    @media(max-width: 640px) {
+        .conditions h2 {
+            font-size: 2.2rem;
+        }
+    }
+    @media(max-width: 480px) {
+        .entry {
+            padding-left: 150px;
+        }
+        .entry p:before {
+            left: -130px;
+        }
+    }
+}

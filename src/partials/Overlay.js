@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./Overlay.css";
+import "../styles/Overlay.css";
 import firebase from "./firebase";
 import mapLocations from "./mapLocations.js";
 import colors from "./colors.js"
@@ -12,7 +12,7 @@ class Overlay extends Component{
             info: [],
         }
     }
-
+    // get the location, date and rating from each entry in the database
     componentDidMount() {
         const dbRef = firebase.database().ref();
         dbRef.on("value", (response) => {
@@ -41,6 +41,7 @@ class Overlay extends Component{
             <div className="overlay">
                 {
                     this.state.info.map((entry)=> {
+                        // only print the map icons for the entries that are from today
                         let currentDate = new Date().getDate()
                         currentDate = ('0' + currentDate).slice(-2)
                         let month = new Date().getMonth() + 1
@@ -50,12 +51,14 @@ class Overlay extends Component{
                         if (currentDate === entry.date) {
                             let entryLocation = entry.location
                             let entryFun = entry.fun
+                            // get a random top and right value from the respective mapLocations values to determine the location of the icon on the page
                             let randomRight = mapLocations[entryLocation].right[Math.floor(Math.random() * mapLocations[entryLocation].right.length)];
                             let randomTop = mapLocations[entryLocation].top[Math.floor(Math.random() * mapLocations[entryLocation].top.length)];
+                            // from the fun rating get corresponding color
                             let circleColor = colors[entryFun]
                             return (
+                                // print map icon with location as class name and determined top, right, and background color values
                                 <div className={"circle " + entry.location} style={{top:randomTop, right: randomRight, background: circleColor}} >
-    
                                 </div>
                             )
                         }

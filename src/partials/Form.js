@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import firebase from "./firebase";
+import Scrollchor from "react-scrollchor";
 
 class Form extends Component {
     constructor() {
@@ -15,9 +16,9 @@ class Form extends Component {
             time: ""
         }
     }
-
+    // create an object from this.state to push to the firebase database
     handleSubmit=(event) => {
-        event.preventDefault();
+        event.preventDefault();   
         const dbRef = firebase.database().ref();
         const entry = {
             name: this.state.name,
@@ -36,18 +37,16 @@ class Form extends Component {
             wind: "strong",
             waves: "",
             fun: "mostFun",
-            date:"",
-            time:"",
             other: "",
         })
     }
-
+    //get values for each input in the form when they change
     handleChange = (event) => {
         this.setState({
             [event.target.name]: event.target.value
         })
     }
-
+    // get todays date and the current time
     componentDidMount() {
         let currentDate = new Date().getDate()
         currentDate = ('0' + currentDate).slice(-2)
@@ -58,24 +57,21 @@ class Form extends Component {
         hour = ('0' + hour).slice(-2)
         let minute = new Date().getMinutes()
         minute = ('0' + minute).slice(-2)
-        console.log(minute.length)
         this.setState({
             time: hour + ':' + minute,
             date: currentDate + '/' + month + '/' + year
         })
     }
-    
-
     render(){
         return(
             <div className="intakeForm" id="intakeForm">
-            <p>Did you kiteboard today?</p>
+            <h2>Did You Kiteboard Today?</h2>
             <form action="submit" onSubmit={this.handleSubmit}>
-                <label htmlFor="name" class="visuallyHidden">Display Name</label>
+                <label htmlFor="name" className="visuallyHidden">Display Name</label>
                 <input type="text" name="name" id="name" onChange={this.handleChange} value={this.state.name} placeholder="Display Name"required/>
-                <label htmlFor="location" class="visuallyHidden">Where did you kite?</label>
+                <label htmlFor="location" className="visuallyHidden">Where did you kite?</label>
                 <select name="location" id="location" onChange={this.handleChange} value={this.state.location} required>
-                    <option class="description" value="" disabled>Where did you Kiteboard?</option>
+                    <option className="description" value="" disabled>Where did you Kiteboard?</option>
                     <option value="alpena">Alpena</option>
                     <option value="algoma">Algoma</option>
                     <option value="brestBay">Brest Bay</option>
@@ -104,7 +100,7 @@ class Form extends Component {
                     <option value="scarboroughBluffs">Scarborough Bluffs</option>
                     <option value="sheboygan">Sheboygan</option>
                     <option value="sherkston">Sherkston</option>
-                    <option value="stCahterines">St Cahterines</option>
+                    <option value="stCatherines">St Catherines</option>
                     <option value="stIgnace">St Ignace</option>
                     <option value="tawasPoint">Tawas Point</option>
                     <option value="wassagaBeach">Wasaga Beach</option>
@@ -113,7 +109,7 @@ class Form extends Component {
                     <option value="woodbineBeach">Woodbine Beach</option>
                 </select>
                 <fieldset>
-                    <legend>How was the wind</legend>
+                    <legend>How was the wind?</legend>
                     <input type="radio" name="wind" value="none" id="none" onChange={this.handleChange} checked={this.state.wind === "none"} required/>
                     <label htmlFor="none">Non-Existent</label>
                     <input type="radio" name="wind" value="light" id="light" onChange={this.handleChange} checked={this.state.wind === "light"} required/>
@@ -126,7 +122,7 @@ class Form extends Component {
                     <label htmlFor="strong">Very Strong (25+ knots)</label>
                 </fieldset>
                 <fieldset>
-                    <legend>How were the waves</legend>
+                    <legend>How were the waves?</legend>
                     <input type="radio" name="waves" value="flat" id="flat" onChange={this.handleChange} checked={this.state.waves === "flat"}/>
                     <label htmlFor="flat">flat</label>
                     <input type="radio" name="waves" value="swell" id="swell" onChange={this.handleChange} checked={this.state.waves === "swell"}/>
@@ -145,7 +141,7 @@ class Form extends Component {
                 </fieldset>
                 <label htmlFor="other">Anything else you want to add?</label>
                 <textarea name="other" id="other" cols="30" rows="3" onChange={this.handleChange} value={this.state.other}></textarea>
-                <input type="submit" value="submit" />
+                <input type="submit" value="Submit" />
             </form>
             </div>
         )

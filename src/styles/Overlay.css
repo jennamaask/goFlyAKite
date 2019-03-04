@@ -13,6 +13,20 @@
     position: absolute;  
 }
 
+.circle:before {
+    background: #1f272d;
+    color: white;
+    padding: 3px 10px;
+    z-index: 20;
+    border-radius: 20px;
+    width: 140px;
+    position: absolute;
+    top: -20px;
+    left: -165px;
+    border: 1px solid white;
+    text-align: center;
+}
+
 .circle:hover::before {
     display: block;
 }
@@ -20,26 +34,31 @@
 .alpena:before {
     content: "Alpena";
     display: none;
+
 }
 
 .algoma:before{
     content:"Algoma";
     display: none;
+    left: 20px;
 }
 
 .brestBay:before {
     content:"Brest Bay";
     display: none;
+
 }
 
 .caseville:before {
     content: "Caseville";
     display: none;
+
 }
 
 .catHeadBay:before {
     content: "Cat Head Bay";
     display: none;
+    left: 20px;
 }
 
 .cherryStreetBeach:before {
@@ -50,6 +69,7 @@
 .cleveland:before {
     content: "Cleveland";
     display: none;
+
 }
 
 .coburgBeach:before {
@@ -65,11 +85,13 @@
 .duluth:before {
     content: "Duluth";
     display: none;
+    left: 20px;
 }
 
 .escanaba:before {
     content: "Escanaba";
     display: none;
+    left: 20px;
 }
 
 .goderich:before {
@@ -80,11 +102,13 @@
 .grandHaven:before {
     content: "Grand Haven";
     display: none;
+    left: 20px;
 }
 
 .greatSandBay:before {
     content: "Great Sand Bay";
     display: none;
+    left: 20px;
 }
 
 .kettlePoint:before {
@@ -110,6 +134,7 @@
 .ludington:before {
     content: "Ludington";
     display: none;
+    left: 20px;
 }
 
 .longPoint:before {
@@ -120,16 +145,19 @@
 .michiganCity:before {
     content: "Michigan City";
     display: none;
+    left: 20px;
 }
 
 .milwaukee:before {
     content: "Milwaukee";
     display: none;
+    left: 20px;
 }
 
 .montrose:before{
     content: "Montrose";
     display: none;
+    left: 20px;
 }
 
 .oliphant:before {
@@ -150,6 +178,7 @@
 .sheboygan:before {
     content: "Sheboygan";
     display: none;
+    left: 20px;
 }
 
 .sherkston:before {
@@ -165,6 +194,7 @@
 .stIgnace:before {
     content: "St Ignace";
     display: none;
+    left: 20px;
 }
 .tawasPoint:before {
     content: "Tawas Points";
@@ -179,6 +209,7 @@
 .waukegan:before {
     content: "Waukegan";
     display: none;
+    left: 20px;
 }
 
 .whiteRock:before {

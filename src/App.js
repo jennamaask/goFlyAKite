@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import "./setup.css";
-import './App.css';
-import Header from "./Header.js";
-import Main from "./Main.js";
-import Conditions from "./Conditions.js";
+import "./styles/setup.css";
+import './styles/App.css';
+import Header from "./partials/Header.js";
+import Main from "./partials/Main.js";
+import Conditions from "./partials/Conditions.js";
 
 
 class App extends Component {

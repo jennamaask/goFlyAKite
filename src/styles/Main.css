@@ -1,0 +1,221 @@
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.map {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.lakes {
+    width: 100%;
+    position: relative;
+    margin-top: 20px;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.legend {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.legend p {
+    margin: 0;
+    padding: 0 5px;
+}
+
+.legendContainer {
+    display: flex;
+    align-items: center;
+}
+
+.yellow, .pink, .blue {
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    margin-left: 20px;
+}
+
+.yellow {
+    background: rgba(255,255,0, .5);
+}
+
+.pink {
+    background: rgba(255, 0, 255, .5);
+}
+
+.blue {
+    background: rgba(0, 255, 255, .5);
+}
+
+.intakeForm {
+    width: 100%;
+    font-size: 1rem;
+    padding-top: 100px;
+}
+
+.intakeForm h2 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+input[type=text], input[type="submit"], select, textarea {
+    background: #40515e;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 20px;
+    color: white;
+}
+
+input[type="text"] {
+    margin-right: 20px;
+    width: calc(50% - 20px);
+}
+
+input[type=text]::placeholder {
+    opacity: 1;
+    color: white;
+}
+
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: url(../assets/downArrow.svg), #40515e;
+    background-position: 95% center;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    margin-left: 20px;
+    width: calc(50% - 20px);
+}
+
+fieldset {
+    width: 100%;
+    border: none;
+    display: flex;
+    margin: 20px 0;
+    padding: 0;
+}
+
+legend, label[for="other"] {
+    font-size: 1.5rem;
+    padding: 10px 0 20px;
+}
+
+
+label {
+    position: relative;
+    padding-left: 20px;
+    margin: 5px 0 5px 40px;
+}
+
+label:before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    background: white;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+}
+
+label:after {
+    content: "";
+    position: absolute;
+    left: -17.5px;
+    top: 2.5px;
+    background: rgba(255, 0, 255, 1);
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    display: none;
+}
+
+input:checked + label:after {
+    display: block;
+}
+
+input[type="radio"] {
+    position: absolute;
+    opacity: 0; 
+}
+
+textarea {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+label[for="other"] {
+    margin: 0;
+    width: 100%;
+}
+
+label[for="other"]:before {
+    height: 0px;
+    width: 0;
+}
+
+input[type="submit"] {
+    margin: 0 20px;
+    transition: all .3s;
+    width: 30%;
+    text-align: center;
+    font-size: 2rem;
+}
+
+input[type="submit"]:hover {
+    color: #40515e;
+    background: white;
+}
+
+input:focus, select:focus, input[type="radio"]:focus + label, textarea:focus {
+    box-shadow: 0 0 5px rgba(128, 255, 128, 1);
+}
+
+@media(max-width: 835px) {
+    fieldset {
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 656px) {
+    .legend {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    input[type="text"] {
+        width: 100%;
+        margin: 0 0 10px 0;
+    }
+    select {
+        width: 100%;
+        margin: 10px 0 0 0;
+    }
+    .intakeForm {
+        padding-top: 50px;
+    }
+    .intakeForm h2 {
+        font-size: 2.2rem;
+    }
+    input[type="submit"] {
+        font-size: 1.5rem;
+        width: 50%;
+    }
+
+}
