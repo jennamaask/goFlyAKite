@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import firebase from "./firebase";
-import Scrollchor from "react-scrollchor";
 
 class Form extends Component {
     constructor() {
@@ -13,12 +12,14 @@ class Form extends Component {
             fun:"mostFun",
             other: "",
             date:"",
-            time: ""
+            time: "",
         }
     }
+    
     // create an object from this.state to push to the firebase database
     handleSubmit=(event) => {
-        event.preventDefault();   
+        event.preventDefault();
+        console.log(this.state);
         const dbRef = firebase.database().ref();
         const entry = {
             name: this.state.name,
@@ -40,12 +41,14 @@ class Form extends Component {
             other: "",
         })
     }
+
     //get values for each input in the form when they change
     handleChange = (event) => {
         this.setState({
             [event.target.name]: event.target.value
         })
     }
+
     // get todays date and the current time
     componentDidMount() {
         let currentDate = new Date().getDate()

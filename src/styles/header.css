@@ -1,3 +1,5 @@
+/* Header Styles */
+
 h1 {
     font-family: 'Pompiere', cursive;
     color: white;
@@ -22,7 +24,6 @@ ul {
     display: flex;
     justify-content: center;
     padding: 0;
-
 }
 
 a {
@@ -43,12 +44,6 @@ a:hover {
 
 a:focus {
     box-shadow: 0 0 5px rgba(128, 255, 128, 1);
-}
-
-.wrapper {
-    max-width: 1200px;
-    width: 90%;
-    margin: 0 auto;
 }
 
 @media(max-width: 806px) {

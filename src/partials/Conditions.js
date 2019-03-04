@@ -12,7 +12,7 @@ class Conditions extends Component {
         }
     }
 
-    //get entries from firebase, but add the ones to this.state that are from "today"
+    //get entries from firebase, but only add the ones to this.state that have the same date as today
     componentDidMount(){
         const dbRef = firebase.database().ref();
         dbRef.on("value", (response) => {
@@ -26,7 +26,7 @@ class Conditions extends Component {
                 const currentYear = new Date().getFullYear()
                 currentDate = currentDate + '/' + currentMonth + '/' + currentYear
                 if (currentDate === conditions[entry].date){
-                    tempArray.push(conditions[entry]);
+                    tempArray.unshift(conditions[entry]);
                 }
             }
             this.setState({
