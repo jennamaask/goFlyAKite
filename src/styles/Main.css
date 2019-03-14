@@ -110,9 +110,12 @@ select {
 fieldset {
     width: 100%;
     border: none;
-    display: flex;
     margin: 20px 0;
     padding: 0;
+}
+
+.fieldsetContainer {
+    display: flex;
 }
 
 legend, label[for="other"] {
@@ -141,7 +144,7 @@ label:after {
     content: "";
     position: absolute;
     left: -17.5px;
-    top: 2.5px;
+    top: .5px;
     background: rgba(255, 0, 255, 1);
     border-radius: 50%;
     height: 15px;

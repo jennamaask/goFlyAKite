@@ -8,6 +8,7 @@ body {
   font-size: 125%;
   font-family: 'Raleway', sans-serif;
   color: white; 
+  line-height: 1.5;
 }
 
 .wrapper {
