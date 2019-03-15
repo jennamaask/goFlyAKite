@@ -10,7 +10,7 @@ main .legend, .map, .legendContainer, form, .fieldsetContainer {
 }
 
 main, form {
-    flex-wrap: wrap
+    flex-wrap: wrap;
 }
 
 form, legend{
@@ -28,7 +28,8 @@ form, legend{
 
 .lakes {
     position: relative;
-    margin-top: 20px;
+    max-width: 1000px;
+    margin: 20px auto 0 auto;
 }
 
 img {
@@ -36,7 +37,9 @@ img {
 }
 
 .legend {
-    margin-top: 100px;
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
 }
 
 .legend p {
@@ -113,6 +116,7 @@ fieldset {
     padding: 0;
 }
 
+
 legend, label[for="other"] {
     font-size: 1.5rem;
     padding: 10px 0 20px;
@@ -158,6 +162,7 @@ input[type="radio"] {
 
 textarea {
     margin-bottom: 20px;
+    height: 100px;
 }
 
 label[for="other"] {
@@ -187,7 +192,7 @@ input:focus, select:focus, input[type="radio"]:focus + label, textarea:focus {
 }
 
 @media(max-width: 835px) {
-    fieldset {
+    .fieldsetContainer {
         flex-direction: column;
     }
 }

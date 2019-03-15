@@ -11,6 +11,7 @@
 
 .headings h3 {
     padding: 5px 15px;
+    /* color: rgba(255, 0, 255, .7) */
 }
 
 .conditions {
@@ -18,8 +19,9 @@
 }
 
 .entry, .noResults {
-    background: white;
+    background: #40515e;
     border-radius: 20px;
+    border: 5px solid #40515e;
 }
 
 .entry {
@@ -28,7 +30,7 @@
 }
 
 .entry p {
-    color: #18232e;
+    color: rgba(255, 0, 255, .7);
     padding: 5px 15px;
 }
 
@@ -64,6 +66,7 @@
     .entry p:before {
         position: absolute;
         left: -150px;
+        color: white;
     }
     .displayName:before {
         content: "Name"

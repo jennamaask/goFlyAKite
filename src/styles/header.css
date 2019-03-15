@@ -16,7 +16,7 @@ header {
 header p {
     text-align: center;
     font-size: 2rem;
-    margin-bottom: 70px;
+    margin: 0 0 30px;
 }
 
 ul {
