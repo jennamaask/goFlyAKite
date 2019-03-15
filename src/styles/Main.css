@@ -5,7 +5,7 @@
     width: 100%;
 }
 
-main .legend, .map, .legendContainer, form, .fieldsetContainer, {
+main .legend, .map, .legendContainer, form, .fieldsetContainer {
     display: flex;
 }
 
