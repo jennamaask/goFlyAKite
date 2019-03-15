@@ -1,3 +1,4 @@
+//corresponding map locations for each kiteboarding spot. We will randomly chose on for top and right, so the dots don't pilie one on top of each other.
 
 const mapLocations = {
 

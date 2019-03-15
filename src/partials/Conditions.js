@@ -19,6 +19,7 @@ class Conditions extends Component {
       let conditions = response.val();
       let tempArray = [];
       for (let entry in conditions) {
+        // get date an put in format dd/mm/yyyy
         let currentDate = new Date().getDate();
         currentDate = ("0" + currentDate).slice(-2);
         let currentMonth = new Date().getMonth() + 1;

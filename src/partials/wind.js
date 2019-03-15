@@ -1,3 +1,4 @@
+//corresponding text for each wind value 
 
 const windDescription = {
     none: "Non-Existent",

@@ -30,6 +30,7 @@ class Main extends Component {
               </div>
             </div>
           </div>
+          {/* passing down scrollTo function to form, to use for onSubmit */}
           <Form scrollTo={this.props.scrollTo} />
         </div>
       </main>

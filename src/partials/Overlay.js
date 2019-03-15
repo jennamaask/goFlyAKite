@@ -51,7 +51,7 @@ class Overlay extends Component{
                         if (currentDate === entry.date) {
                             let entryLocation = entry.location
                             let entryFun = entry.fun
-                            // get a random top and right value from the respective mapLocations values to determine the location of the icon on the page
+                            // get a random top and right value from the respective mapLocations values to determine the location of the circle on the page
                             let randomRight = mapLocations[entryLocation].right[Math.floor(Math.random() * mapLocations[entryLocation].right.length)];
                             let randomTop = mapLocations[entryLocation].top[Math.floor(Math.random() * mapLocations[entryLocation].top.length)];
                             // from the fun rating get corresponding color

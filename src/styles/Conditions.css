@@ -17,11 +17,14 @@
     padding: 40px 0;
 }
 
+.entry, .noResults {
+    background: white;
+    border-radius: 20px;
+}
+
 .entry {
     display: flex;
-    background: white;
     margin: 10px 5px;
-    border-radius: 20px;
 }
 
 .entry p {
@@ -29,36 +32,18 @@
     padding: 5px 15px;
 }
 
-.displayName {
+.displayName, .displayLocation, .displayWind, .displayWave {
     width: 15%;
 }
 
-.displayDate {
+.displayDate, .displayOther {
     width: 20%;
 }
 
-.displayLocation {
-    width: 15%;
-}
-
-.displayWind {
-    width: 15%
-}
-
-.displayWave {
-    width: 15%
-}
-
-.displayOther {
-    width: 20%
-}
-
 .noResults {
-    background: white;
     color: #18232e;
     width: 100%;
     padding: 10px 20px;
-    border-radius: 20px;
     font-size: 1.5rem;
     text-align: center;
 }

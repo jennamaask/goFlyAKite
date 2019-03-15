@@ -8,7 +8,7 @@ class Form extends Component {
       name: "",
       location: "",
       wind: "strong",
-      waves: "",
+      waves: "bigWaves",
       fun: "mostFun",
       other: "",
       date: "",
@@ -49,7 +49,7 @@ class Form extends Component {
     });
   };
 
-  // get todays date and the current time
+  // get todays date and the current time and put in format dd/mm/yyyy
   componentDidMount() {
     let currentDate = new Date().getDate();
     currentDate = ("0" + currentDate).slice(-2);
@@ -198,6 +198,7 @@ class Form extends Component {
                 id="flat"
                 onChange={this.handleChange}
                 checked={this.state.waves === "flat"}
+                required
               />
               <label htmlFor="flat">Nice and Flat</label>
               <input
@@ -207,6 +208,7 @@ class Form extends Component {
                 id="swell"
                 onChange={this.handleChange}
                 checked={this.state.waves === "swell"}
+                required
               />
               <label htmlFor="swell">Some Swell</label>
               <input
@@ -216,6 +218,7 @@ class Form extends Component {
                 id="bigWaves"
                 onChange={this.handleChange}
                 checked={this.state.waves === "bigWaves"}
+                required
               />
               <label htmlFor="bigWaves">Big Waves!</label>
             </div>
