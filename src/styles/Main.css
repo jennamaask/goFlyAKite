@@ -28,7 +28,7 @@ form, legend{
 
 .lakes {
     position: relative;
-    max-width: 1000px;
+    max-width: 600px;
     margin: 20px auto 0 auto;
 }
 
@@ -37,7 +37,7 @@ img {
 }
 
 .legend {
-    margin-top: 70px;
+    margin-top: 40px;
     display: flex;
     justify-content: center;
 }
@@ -47,6 +47,9 @@ img {
     padding: 0 5px;
 }
 
+nav {
+    margin-top: 30px;
+}
 .yellow, .pink, .blue {
     border-radius: 50%;
     width: 15px;
@@ -72,7 +75,7 @@ img {
 }
 
 .intakeForm h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: center;
 }
 

@@ -3,7 +3,7 @@
 h1 {
     font-family: 'Pompiere', cursive;
     color: white;
-    font-size: 8rem;
+    font-size: 5rem;
     margin: 0;
     letter-spacing: .7rem;
     text-align: center;
@@ -15,8 +15,8 @@ header {
 
 header p {
     text-align: center;
-    font-size: 2rem;
-    margin: 0 0 30px;
+    font-size: 1.2rem;
+    margin: 0;
 }
 
 ul {
